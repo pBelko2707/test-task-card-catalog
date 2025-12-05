@@ -1,0 +1,19 @@
+{
+  "name": "test-task-card-catalog",
+  "version": "1.0.0",
+  "description": "Card catalog with search and filters - Test Task",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build:css": "sass styles/main.scss styles/main.css --style=compressed",
+    "watch:css": "sass --watch styles/main.scss styles/main.css",
+    "predeploy": "npm run build:css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["test-task", "catalog", "filters", "search", "bem"],
+  "author": "",
+  "license": "MIT"
+}

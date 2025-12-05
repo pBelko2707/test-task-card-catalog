@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Catalog - Test Task</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page">
+<div class="page__container">
+    <svg class="site-decor site-decor--dots">
+        <use href="/icons/dots.svg"></use>
+    </svg>
+    <svg class="site-decor site-decor--figures">
+        <use href="/icons/figures.svg"></use>
+    </svg>
+    <svg class="site-decor site-decor--shapes">
+        <use href="/icons/shapes.svg"></use>
+    </svg>
+    <header class="header">
+        <div class="header__content">
+            <h6 class="header__description">Enjoy your studying!</h6>
+            <h1 class="header__title">Our online courses</h1>
+        </div>
+    </header>
+    <main class="main">
+        <section class="filters">
+            <div class="filters__container">
+                <button class="filters__button filters__button_active" data-filter="all" aria-pressed="true">
+                    All
+                    <span class="filters__count">9</span>
+                </button>
+                <button class="filters__button" data-filter="marketing" aria-pressed="false">
+                    Marketing
+                    <span class="filters__count">2</span>
+                </button>
+                <button class="filters__button" data-filter="management" aria-pressed="false">
+                    Management
+                    <span class="filters__count">2</span>
+                </button>
+                <button class="filters__button" data-filter="hr" aria-pressed="false">
+                    HR & Recruting
+                    <span class="filters__count">2</span>
+                </button>
+                <button class="filters__button" data-filter="design" aria-pressed="false">
+                    Design
+                    <span class="filters__count">2</span>
+                </button>
+                <button class="filters__button" data-filter="development" aria-pressed="false">
+                    Development
+                    <span class="filters__count">1</span>
+                </button>
+            </div>
+            <div class="filters__search-wrapper">
+                <svg class="filters__search-icon">
+                    <use href="/icons/search.svg"></use>
+                </svg>
+                <input
+                        name="search"
+                        type="text"
+                        class="filters__search"
+                        placeholder="Search course..."
+                        aria-label="Search projects by name"
+                >
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="cards__container" id="cards-container">
+                <!-- Карточки будут сгенерированы через JS -->
+            </div>
+            <div class="cards__empty" id="cards-empty">
+                <i class="cards__empty-icon fas fa-search"></i>
+                <p class="cards__empty-text">No projects found</p>
+                <p class="cards__empty-subtext">Try adjusting your search or filter</p>
+            </div>
+
+            <div class="cards__load-more" id="load-more-wrapper">
+                <button class="load-more-btn" id="load-more-btn" type="button">
+                    <svg class="load-more-btn__icon">
+                        <use href="/icons/convert.svg"></use>
+                    </svg>
+                    <span class="load-more-btn__text">Load more</span>
+                </button>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
